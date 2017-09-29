@@ -38,6 +38,6 @@
         </select>
         
         <div id="divAct"></div>
-      
+      <div id="divAgents"></div>
     </body>
 </html>

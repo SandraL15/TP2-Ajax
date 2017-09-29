@@ -19,4 +19,23 @@ function AfficherLesFormation(numero)
                 );
             }
 
-            
+       function AfficherAgents(numero)
+            {
+                $.ajax
+                (
+                        {
+                           type:'get',
+                           url:"index.php/CtrlAccueil/afficherLesAgents",
+                           data:"numeroFormation="+numero,
+                           success:function(data)
+                           {
+                               $('#divAgents').empty();
+                               $('#divAgents').append(data);
+                           },
+                           error:function()
+                           {
+                              alert("impossible de récupérer les agents de la formation"); 
+                           }
+                        }
+                );
+            }     
